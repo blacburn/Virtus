@@ -1,0 +1,82 @@
+@font-face {
+
+font-family: poorRich;
+
+src: url(../css/poorich.ttf) format(‘truetype’);
+
+}
+
+ div.formulario {
+  width: 100%;
+  margin: 0px auto 0 auto;
+  float: left;
+  border-collapse: collapse;
+  border-width: 0px;
+  border-style: solid;
+  border-color: #CCCCCC;
+  background-color: #FFFFFF;
+  border-spacing: 0px;
+  padding:0px;
+  font-size: 100%;
+}
+
+/** {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}*/
+#bannerBackground {
+     
+	margin: auto;
+	width: 100%;
+	float: left;
+        font-size: 100%;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f6f8f9+0,e5ebee+50,d7dee3+51,f5f7f9+100;White+Gloss */
+background: rgb(255,175,75);
+background: -moz-linear-gradient(-45deg, rgb(255,175,75) 0%, rgb(255,175,75) 0%, rgb(255,175,75) 42%, rgb(255,146,10) 57%);
+background: -webkit-gradient(left top, right bottom, color-stop(0%, rgb(255,175,75)), color-stop(0%, rgb(255,175,75)), color-stop(42%, rgb(255,175,75)), color-stop(57%, rgb(255,146,10)));
+background: -webkit-linear-gradient(-45deg, rgb(255,175,75) 0%, rgb(255,175,75) 0%, rgb(255,175,75) 42%, rgb(255,146,10) 57%);
+background: -o-linear-gradient(-45deg, rgb(255,175,75) 0%, rgb(255,175,75) 0%, rgb(255,175,75) 42%, rgb(255,146,10) 57%);
+background: -ms-linear-gradient(-45deg, rgb(255,175,75) 0%, rgb(255,175,75) 0%, rgb(255,175,75) 42%, rgb(255,146,10) 57%);
+background: linear-gradient(135deg, rgb(255,175,75) 0%, rgb(255,175,75) 0%, rgb(255,175,75) 42%, rgb(255,146,10) 57%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffaf4b', endColorstr='#ff920a', GradientType=1 );
+    
+/* 	background: rgba(75,129,76,1); */
+/* 	background: -moz-radial-gradient(center, ellipse cover, rgba(75,129,76,1) 0%, rgba(6,61,6,1) 64%, rgba(6,61,6,1) 100%); */
+/* 	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(75,129,76,1)), color-stop(64%, rgba(6,61,6,1)), color-stop(100%, rgba(6,61,6,1))); */
+/* 	background: -webkit-radial-gradient(center, ellipse cover, rgba(75,129,76,1) 0%, rgba(6,61,6,1) 64%, rgba(6,61,6,1) 100%); */
+/* 	background: -o-radial-gradient(center, ellipse cover, rgba(75,129,76,1) 0%, rgba(6,61,6,1) 64%, rgba(6,61,6,1) 100%); */
+/* 	background: -ms-radial-gradient(center, ellipse cover, rgba(75,129,76,1) 0%, rgba(6,61,6,1) 64%, rgba(6,61,6,1) 100%); */
+/* 	background: radial-gradient(ellipse at center, rgba(75,129,76,1) 0%, rgba(6,61,6,1) 64%, rgba(6,61,6,1) 100%); */
+/* 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4b814c', endColorstr='#063d06', GradientType=1 ); */
+       
+}
+
+#bannerImagen{
+		width : 70% ;
+		float: left;	
+}
+
+#bannerIdentificador{
+		width : 30% ;
+		float: left;
+		margin-top: 1cm;
+		font-size: 100%;
+		color: #2680FF;
+		font-weight: bold;
+}
+
+#bannerDatos{
+		width : 30% ;
+		float: right;
+		margin-top: 1cm;
+		font-family: poorRich;
+		font-size: 100%;
+		color: #FFFFFF;
+		font-weight: bold;
+}
+
+#marcoGeneral{
+                display: inline;
+                width: 10%;
+}

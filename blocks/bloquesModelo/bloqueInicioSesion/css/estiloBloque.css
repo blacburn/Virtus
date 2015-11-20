@@ -1,0 +1,66 @@
+             
+
+
+#Central{
+    width : 10%;
+    margin: 0 auto; 
+
+    top:  0px; 
+    left: 0px;
+}
+#cuadros{
+    position: absolute;
+    position: absolute;    
+    top:  100px;
+    left: 200px;
+    
+    padding: 2%;
+    width : 230px ;
+    height: 150px ;
+    background-color: #fff;
+    opacity: 0.6; 
+    border-radius: 15px 15px 15px 15px;
+    -moz-border-radius: 15px 15px 15px 15px;
+    -webkit-border-radius: 15px 15px 15px 15px;
+    border: 0px solid #000000;
+}
+
+#cuadroRegistro{
+    position: absolute;   
+    position: absolute;   
+    top:  40px;
+    left: 750px;
+    padding: 2%;
+    width : 240px ;
+    height: 320px ;
+    background-color: #fff;
+    opacity: 0.6; 
+    border-radius: 15px 15px 15px 15px;
+    -moz-border-radius: 15px 15px 15px 15px;
+    -webkit-border-radius: 15px 15px 15px 15px;
+    border: 0px solid #000000;
+}
+
+#ImagenCentral{
+    position: absolute;
+    background-image: url(../imagenes/fondo.jpg);
+
+
+    width : 100%;
+    height: 450px;
+    top : 180px;
+    margin-top: -0.75cm; 
+    margin-left: -0.53cm;
+    left: 20px;
+    bottom: 100px;
+       
+    
+
+
+
+    /*background-image: url('http://orig05.deviantart.net/652b/f/2011/308/f/4/page_background_by_30ml-d4f1qpa.jpg');*/ 
+
+
+
+}
+
