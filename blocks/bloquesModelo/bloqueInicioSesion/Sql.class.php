@@ -31,7 +31,7 @@ class Sql extends \Sql {
         $idSesion = $this->miConfigurador->getVariableConfiguracion ( "id_sesion" );
         
         $claveEncriptada = $this->miConfigurador->fabricaConexiones->crypto->codificar ($_REQUEST ['contraseña']);
-        
+         $claveEncriptadaRegistro = $this->miConfigurador->fabricaConexiones->crypto->codificar ($_REQUEST ['contraseñaRegistro']); 
         switch ($tipo) {
             
             /**
@@ -58,9 +58,8 @@ class Sql extends \Sql {
                 break;
             case 'insertarRegistroxUsuario' :
                 $cadenaSql = 'INSERT INTO ';
-                $cadenaSql .= $prefijo . 'usuario ';
+                $cadenaSql .=  'virtus_usuario ';
                 $cadenaSql .= '( ';
-                $cadenaSql .= 'id_usuario,';
                 $cadenaSql .= 'nombre,';
                 $cadenaSql .= 'apellido,';
                 $cadenaSql .= 'correo,';
@@ -72,24 +71,25 @@ class Sql extends \Sql {
                 $cadenaSql .= 'idioma,';
                 $cadenaSql .= 'estado,';
                 $cadenaSql .= 'edad,';
-                $cadenaSql .= 'sexo';
+                $cadenaSql .= 'sexo,';
+                $cadenaSql .= 'usuario';
                 $cadenaSql .= ') ';
                 $cadenaSql .= 'VALUES ';
-                $cadenaSql .= '( ';
-                $cadenaSql .= ' , ';
-                $cadenaSql .= '\'' . $_REQUEST ['nombreRegistro'] . '\', ';
-                $cadenaSql .= '\'' . $_REQUEST ['apellidoRegistro'] . '\', ';
-                $cadenaSql .= "' ', ";
-                $cadenaSql .= "' ', ";
-                $cadenaSql .= " , ";
-                $cadenaSql .= '\'' . $_REQUEST ['contraseñaRegistro'] . '\', ';
-                $cadenaSql .= "' ', ";
-                $cadenaSql .= "' ', ";
-                $cadenaSql .= "' ', ";
-                $cadenaSql .= ' , ';
-                $cadenaSql .= ' , ';
-                $cadenaSql .= "' ', ";
-                $cadenaSql .= ') ';
+            	$cadenaSql .= '( ';
+            	$cadenaSql .= '\'' . $_REQUEST ['nombreRegistro'] . '\', ';
+            	$cadenaSql .= '\'' . $_REQUEST ['apellidoRegistro'] . '\', ';
+            	$cadenaSql .= '\'' . 'vacio' . '\', ';
+            	$cadenaSql .= '\'' .  'vacio'. '\', ';
+                $cadenaSql .= '\'' .  'vacio'. '\', ';
+                $cadenaSql .= '\'' .  $claveEncriptadaRegistro . '\', ';
+                $cadenaSql .= '\'' .  '""'. '\', ';
+                $cadenaSql .= '\'' .  'basico'. '\', ';
+                $cadenaSql .= '\'' .  'es_es'. '\', ';
+            	$cadenaSql .= '0, ';
+                $cadenaSql .= '0, ';
+                $cadenaSql .= '\'' .  'N'. '\', ';
+                $cadenaSql .= '\'' . $_REQUEST ['usuarioRegistro']. '\' ';
+            	$cadenaSql .= ') ';
                 echo $cadenaSql;
                 break;
             case 'actualizarRegistro' :
@@ -139,7 +139,7 @@ class Sql extends \Sql {
                 $cadenaSql .= 'FROM ';
                 $cadenaSql .= $prefijo . 'usuario ';
                 $cadenaSql .= 'WHERE ';
-                $cadenaSql .= 'nombre=\'' . $_REQUEST ['usuario']  . '\' AND ';
+                $cadenaSql .= 'usuario=\'' . $_REQUEST ['usuario']  . '\' AND ';
                 $cadenaSql .= 'clave=\'' . $claveEncriptada . '\' ';
                 break;
             

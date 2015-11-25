@@ -1,5 +1,5 @@
 <?php
-$this->idioma["usuario"]="Identificación:";
+$this->idioma["usuario"]="Usuario:";
 $this->idioma["clave"]="Clave:";
 $this->idioma["usuarioTitulo"]="ingrese usuario";
 $this->idioma["claveTitulo"]="Clave de Acceso";

@@ -196,6 +196,7 @@ class Pgsql extends ConectorDb {
             
             return $esteRegistro;
         } else {
+           
             return $this->ejecutar_acceso_db ( $cadena );
         }
     

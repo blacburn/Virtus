@@ -62,6 +62,27 @@ class Frontera {
         
         
         if(isset($_REQUEST['opcion'])){
+//                switch ($_REQUEST ['opcion']) {
+//				
+//				case "ingresaSesion" :
+//                                    echo 'htappp';
+//					include_once ($this->ruta . "/formulario/contenido.php");
+//					break;
+//				
+//				case "accesoDenegadoSesion":
+//					 echo"<script>alert('Usuario o contraseña incorrecta')</script>"; 
+//        			         include_once ($this->ruta . "/formulario/contenido.php");	
+//                                    
+//				case "ingresaRegistro":
+//					echo"<script>alert('registro completado!')</script>"; 
+//					break;
+//                                    
+//                                case "accesoDenegadoRegistro":
+//					echo"<script>alert('Verifique la contraseña o que todos los campos esten suministrados')</script>"; 
+//        			include_once ($this->ruta . "/formulario/contenido.php");
+//					break;    
+//                             
+//        		}
             
               if($_REQUEST['botonInicioSesion']=='true'){
                   $auxiliar = $this->sql->getCadenaSql("buscarRegistroxUsuario");
@@ -94,7 +115,7 @@ class Frontera {
                     if(!empty($_REQUEST['nombreRegistro']) AND !empty($_REQUEST['apellidoRegistro']) AND !empty($_REQUEST['usuarioRegistro']) AND !empty($_REQUEST['contraseñaRegistro']) ){
                         if($_REQUEST['contraseñaRegistro']==$_REQUEST['confirmaContraseña']){
                         $auxiliar = $this->sql->getCadenaSql("insertarRegistroxUsuario");
-                        echo $esteRecurso->ejecutarAcceso($auxiliar, "acceso");
+                        $esteRecurso->ejecutarAcceso($auxiliar, "acceso");
                        
                         $_REQUEST['opcion']='ingresa';
                         }
@@ -113,7 +134,7 @@ class Frontera {
                     
         		case "ingresa":
         			//nclude_once ($this->ruta . "/formulario/tabla.php");
-                               
+                                echo"<script>alert('registro completado!')</script>"; 
         			break;
                         case "accesoDenegado":
                                 echo"<script>alert('Verifique la contraseña o que todos los campos esten suministrados')</script>"; 
